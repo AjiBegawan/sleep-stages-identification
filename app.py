@@ -4,6 +4,7 @@ import numpy as np
 import pywt
 import sys
 import path
+import os 
 
 from keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
@@ -11,6 +12,9 @@ from sklearn.preprocessing import OneHotEncoder
 
 dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
+
+path = os.path.dirname(__file__)
+
 
 def show_title():
     title = "IDENTIFICATION OF SLEEP STAGES BASED ON EEG SIGNALS USING MACHINE LEARNING (PARALLEL CNN AND RNN)"
@@ -96,10 +100,10 @@ def upload_sleep_file():
   return st.file_uploader("Upload Sleep File", key="uploader")
 
 def select_sleep_file():
-  file_paths = ["examples-dataset\Data_EEG_s10.pkl", 
-                "examples-dataset\Data_EEG_s80.pkl", 
-                "examples-dataset\Data_EEG_s137.pkl",
-                "examples-dataset\Data_EEG_s144.pkl"]
+  file_paths = [f"{path}\examples-dataset\Data_EEG_s10.pkl", 
+                f"{path}\examples-dataset\Data_EEG_s80.pkl", 
+                f"{path}\examples-dataset\Data_EEG_s137.pkl",
+                f"{path}\examples-dataset\Data_EEG_s144.pkl"]
   button_states = [False, False, False, False]
 
   for i, file_path in enumerate(file_paths):
