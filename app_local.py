@@ -2,15 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pywt
-import sys
-import path
 
 from keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import OneHotEncoder
-
-dir = path.Path(__file__).abspath()
-sys.path.append(dir.parent.parent)
 
 def show_title():
     title = "IDENTIFICATION OF SLEEP STAGES BASED ON EEG SIGNALS USING MACHINE LEARNING (PARALLEL CNN AND RNN)"
@@ -119,7 +114,6 @@ def load_file():
     selected_data = select_sleep_file()
     
   return uploaded_data if uploaded_data is not None else selected_data
-  # return uploaded_data
 
 def calculate_sleep_stages(sleep_file):
   if sleep_file is None:
@@ -139,11 +133,11 @@ def calculate_sleep_stages(sleep_file):
   oneHot = OneHotEncoder(sparse=False)
   y_test = oneHot.fit_transform(y_file)
 
-  # weights_path = f"models\model.h5"
-  # model = load_model(weights_path)
-  # y_pred=model.predict(x_test) 
+  weights_path = f"models\model.h5"
+  model = load_model(weights_path)
+  y_pred=model.predict(x_test) 
 
-  # y_pred_max=np.argmax(y_pred, axis=1)
+  y_pred_max=np.argmax(y_pred, axis=1)
   y_test_max=np.argmax(y_test, axis=1)
 
   return data,x_file, y_test_max
