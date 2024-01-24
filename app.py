@@ -15,7 +15,6 @@ sys.path.append(dir.parent.parent)
 
 path = os.path.dirname(__file__)
 
-
 def show_title():
     title = "IDENTIFICATION OF SLEEP STAGES BASED ON EEG SIGNALS USING MACHINE LEARNING (PARALLEL CNN AND RNN)"
     st.markdown(
@@ -123,7 +122,6 @@ def load_file():
     selected_data = select_sleep_file()
     
   return uploaded_data if uploaded_data is not None else selected_data
-  # return uploaded_data
 
 def calculate_sleep_stages(sleep_file):
   if sleep_file is None:
