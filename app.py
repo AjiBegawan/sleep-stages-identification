@@ -100,10 +100,10 @@ def upload_sleep_file():
   return st.file_uploader("Upload Sleep File", key="uploader")
 
 def select_sleep_file():
-  file_paths = [f"{path}\examples-dataset\Data_EEG_s10.pkl", 
-                f"{path}\examples-dataset\Data_EEG_s80.pkl", 
-                f"{path}\examples-dataset\Data_EEG_s137.pkl",
-                f"{path}\examples-dataset\Data_EEG_s144.pkl"]
+  file_paths = [f"{path}/examples-dataset/Data_EEG_s10.pkl", 
+                f"{path}/examples-dataset/Data_EEG_s80.pkl", 
+                f"{path}/examples-dataset/Data_EEG_s137.pkl",
+                f"{path}/examples-dataset/Data_EEG_s144.pkl"]
   button_states = [False, False, False, False]
 
   for i, file_path in enumerate(file_paths):
@@ -143,11 +143,11 @@ def calculate_sleep_stages(sleep_file):
   oneHot = OneHotEncoder(sparse=False)
   y_test = oneHot.fit_transform(y_file)
 
-  # weights_path = f"models\model.h5"
-  # model = load_model(weights_path)
-  # y_pred=model.predict(x_test) 
+  weights_path = f"{path}/models/model.h5"
+  model = load_model(weights_path)
+  y_pred=model.predict(x_test) 
 
-  # y_pred_max=np.argmax(y_pred, axis=1)
+  y_pred_max=np.argmax(y_pred, axis=1)
   y_test_max=np.argmax(y_test, axis=1)
 
   return data,x_file, y_test_max
