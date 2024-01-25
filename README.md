@@ -3,11 +3,6 @@
 
 Uncover the secrets of your sleep with this innovative web app powered by Python, Streamlit, and machine learning!
 
-## Screenshots
-
-![Sleep Stages Identification Website](https://github.com/AjiBegawan/sleep-stages-identification/blob/main/images/website-page.png)
-
-
 ## Demo
 
 [![Test](https://img.shields.io/website?url=https%3A%2F%2Fsleep-stages-identification.streamlit.app%2F&logo=streamlit&label=Sleep%20Stages%20Identification
@@ -51,10 +46,14 @@ Start the project
   streamlit run app.py
 ```
 
-
 ## Usage
 
 1. Load your EEG data (in supported format)
 2. The app will automatically process the data and generate the sleep report
 3. Explore the report to gain insights into your sleep patterns
 4. Explore your sleep, optimize your rest, and uncover the mysteries of your mind!
+
+
+## Screenshots
+
+![Sleep Stages Identification Website](https://github.com/AjiBegawan/sleep-stages-identification/blob/main/images/website-page.png)
