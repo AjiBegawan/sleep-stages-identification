@@ -22,12 +22,11 @@ def show_title():
       unsafe_allow_html=True
       )
 
+
 def show_identity():
   col1, col2, col3 = st.columns([5, 5, 5])
-  col2.markdown(
-    "<h5 style='text-align: center;'>Created by Indiarto Aji Begawan</h5>", 
-    unsafe_allow_html=True
-    )
+  identity = "Indiarto Aji Begawan | 2024"
+  col2.write(identity)
 
 def wavelet(x_file, fams):
   wp = pywt.WaveletPacket2D(data=x_file, wavelet=fams, mode='zero')
