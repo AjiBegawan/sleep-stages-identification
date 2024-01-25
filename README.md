@@ -3,12 +3,9 @@
 
 Uncover the secrets of your sleep with this innovative web app powered by Python, Streamlit, and machine learning!
 
-
-
-
 ## Screenshots
 
-![Sleep Stages Identification Website](https://github.com/AjiBegawan/Dicoding-Personal-Notes-App/blob/main/images/website-page.png)
+![Sleep Stages Identification Website](https://github.com/AjiBegawan/sleep-stages-identification/blob/main/images/website-page.png)
 
 
 ## Demo
