@@ -6,7 +6,7 @@ Uncover the secrets of your sleep with this innovative web app powered by Python
 ## Demo
 
 [![Test](https://img.shields.io/website?url=https%3A%2F%2Fsleep-stages-identification.streamlit.app%2F&logo=streamlit&label=Sleep%20Stages%20Identification
-)](https://katherineoelsner.com/)
+)](https://sleep-stages-identification.streamlit.app/)
 
 ## Key Features
 
