@@ -46,9 +46,9 @@ Start the project
   streamlit run app.py
 ```
 
-## Usage
+## How to use
 
-1. Load your EEG data (in supported format)
+1. Load your EEG data (in a supported format)
 2. The app will automatically process the data and generate the sleep report
 3. Explore the report to gain insights into your sleep patterns
 4. Explore your sleep, optimize your rest, and uncover the mysteries of your mind!
